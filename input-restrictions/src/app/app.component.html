@@ -1,0 +1,71 @@
+<div class="container">
+    <h1>Create Student</h1>
+    <h2> {{member.firstName}} {{member.lastName}} </h2>
+    <form>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-form-label-sm" for="firstname">First name</label>
+                    <input type="text" tabindex="1" class="form-control form-control-sm" placeholder="First name" name="firstName"
+                        required [(ngModel)]="member.firstName" #firstName="ngModel" lettersOnly>
+                    <br />
+                    <label class="col-form-label-sm" for="phone">Phone</label>
+                    <input type="text" tabindex="3" class="form-control form-control-sm" placeholder="Phone" name="phone"
+                        required [(ngModel)]="member.phone" #phone="ngModel" phoneOnly>
+                    <br />
+                    <label class="col-form-label-sm" for="ssn">SSN</label>
+                    <input type="text" tabindex="5" class="form-control form-control-sm" placeholder="SSN" name="ssn"
+                        required [(ngModel)]="member.ssn" #ssn="ngModel" ssnNumber>
+                    <br />
+                    <label class="col-form-label-sm" for="year">Postal No</label>
+                    <ng-select tabindex="7" name="postalNo" required class="form-control form-control-sm" [items]="masterData.postalCode"
+                        bindLabel="code" bindValue="id" [(ngModel)]="member.postalNo" #postalNo="ngModel" (change)="onPostalNoChange($event)">
+                    </ng-select>
+                    <br />
+                    <label class="col-form-label-sm" for="addressline1">Address line1</label>
+                    <input type="text" tabindex="9" class="form-control form-control-sm" placeholder="Address line1"
+                        name="addressline1" required [(ngModel)]="member.addressline1" #addressline1="ngModel"
+                        lettersNumbersOnly>
+                    <br />
+                    <label class="col-form-label-sm" for="gpa">GPA</label>
+                    <input type="text" tabindex="11" class="form-control form-control-sm" placeholder="GPA" name="gpa"
+                        required [(ngModel)]="member.gpa" #gpa="ngModel" decimalnumberOnly>
+                    <br />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-form-label-sm" for="lastName">Last name</label>
+                    <input type="text" tabindex="2" class="form-control form-control-sm" placeholder="Last name" name="lastName"
+                        required [(ngModel)]="member.lastName" #lastName="ngModel" lettersOnly>
+                    <br />
+                    <label class="col-form-label-sm" for="email">Email</label>
+                    <input type="email" tabindex="4" class="form-control form-control-sm" placeholder="Email" name="email"
+                        required [(ngModel)]="member.email" #email="ngModel">
+                    <br />
+                    <label class="col-form-label-sm" for="gender">Gender</label>
+                    <ng-select tabindex="6" name="gender" required class="form-control form-control-sm" [items]="masterData.gender"
+                        bindLabel="value" bindValue="id">
+                    </ng-select>
+                    <br />
+                    <label class="col-form-label-sm" for="batch">Postal Place</label>
+                    <input type="text" tabindex="8" class="form-control form-control-sm" placeholder="Postal place"
+                        name="postalPlace" required [(ngModel)]="member.postalPlace" #postalPlace="ngModel" disabled>
+                    <br />
+                    <label class="col-form-label-sm" for="addressline2">Address line2</label>
+                    <input type="text" tabindex="10" class="form-control form-control-sm" placeholder="Address line2"
+                        name="addressline2" required [(ngModel)]="member.addressline2" #addressline2="ngModel"
+                        lettersNumbersOnly>
+                    <br />
+                    <label class="col-form-label-sm" for="certificateissued">Certificate Issued</label>
+                    <label class="switch float-right">
+                        <input checked name="certificateissued" type="checkbox" [(ngModel)]="member.certificateissued"
+                            #certificateissued="ngModel" tabindex="12">
+                        <span class="slider round"></span>
+                    </label>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
