@@ -55,3 +55,30 @@ export class LettersOnlyDirective{
   <input type="text" tabindex="1" class="form-control form-control-sm" placeholder="First name" 
   name="firstName" required [(ngModel)]="member.firstName" #firstName="ngModel" lettersOnly>
 ```
+
+# Some more in action
+
+You can check how to listen to onchange event in a dropdown field and manipulate another control based on that
+```
+ <label class="col-form-label-sm" for="year">Postal No</label>
+ <ng-select tabindex="7" name="postalNo" required class="form-control form-control-sm" 
+  [items]="masterData.postalCode" bindLabel="code" bindValue="id" [(ngModel)]="member.postalNo" 
+  #postalNo="ngModel" (change)="onPostalNoChange($event)">
+ </ng-select>
+ <br />
+```
+
+```
+onPostalNoChange(event) {
+  if (event == null) {
+    this.member.postalPlace = '';
+  }
+  else {
+    this.masterData.postalCode.forEach(entry => {
+      if (entry.code == event.code) {
+        this.member.postalPlace = entry.city;
+      }
+    });
+  }
+}
+```
