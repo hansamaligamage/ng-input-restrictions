@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "input-restrictions-api", "input-restrictions-api.csproj", "{5F3F2A47-ED71-48AE-AD82-5F5FFE60DBF9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "input-restrictions-dal", "..\input-restrictions-dal\input-restrictions-dal.shproj", "{4283C875-C039-440D-8C0E-768752C1A563}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\input-restrictions-dal\input-restrictions-dal.projitems*{4283c875-c039-440d-8c0e-768752c1a563}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F3F2A47-ED71-48AE-AD82-5F5FFE60DBF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3F2A47-ED71-48AE-AD82-5F5FFE60DBF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3F2A47-ED71-48AE-AD82-5F5FFE60DBF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3F2A47-ED71-48AE-AD82-5F5FFE60DBF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0F6FC17-4C82-4519-A1BC-FD84C359C27C}
+	EndGlobalSection
+EndGlobal
