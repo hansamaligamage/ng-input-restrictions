@@ -82,3 +82,4 @@ onPostalNoChange(event) {
   }
 }
 ```
+If you want to know more, go through this post [Angular 6 : Input restrictions in a form](https://social.technet.microsoft.com/wiki/contents/articles/52291.angular-6-input-restrictions-in-a-form.aspx) 
